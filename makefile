@@ -10,6 +10,7 @@ all: traffic_aware_topology.pdf
 
 traffic_aware_topology.pdf: traffic_aware_topology.ps
 	ps2pdf14 traffic_aware_topology.ps
+	google-chrome traffic_aware_topology.pdf
 
 traffic_aware_topology.ps: traffic_aware_topology.dvi
 	dvips -t letter -e 0 -o traffic_aware_topology.ps traffic_aware_topology.dvi
