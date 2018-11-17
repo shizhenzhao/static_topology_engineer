@@ -1,0 +1,90 @@
+This is BibTeX, Version 0.99d (TeX Live 2017/Debian)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: traffic_aware_topology.aux
+The style file: ACM-Reference-Format.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Database file #1: reference.bib
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
+Reallocated global_strs (elt_size=20001) to 20 items from 10.
+Reallocated glb_str_end (elt_size=4) to 20 items from 10.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Warning--empty publisher in osqp-codegen
+Warning--empty address in osqp-codegen
+Warning--page numbers missing in both pages and numpages fields in osqp-codegen
+Warning--empty publisher in benson2010network
+Warning--empty address in benson2010network
+Warning--empty publisher in benson2009understanding
+Warning--empty address in benson2009understanding
+Warning--empty publisher in delimitrou2012echo
+Warning--empty address in delimitrou2012echo
+Warning--no journal in foerster2018characterizing
+Warning--no number and no volume in foerster2018characterizing
+Warning--page numbers missing in both pages and numpages fields in foerster2018characterizing
+Warning--empty publisher in ghobadi2016projector
+Warning--empty address in ghobadi2016projector
+Warning--can't use both volume and number fields in hamedazimi2014firefly
+Warning--empty publisher in hamedazimi2014firefly
+Warning--empty address in hamedazimi2014firefly
+Warning--empty publisher in jain2012topology
+Warning--empty address in jain2012topology
+Warning--empty publisher in liu2015scheduling
+Warning--empty address in liu2015scheduling
+Warning--empty publisher in papaioannou2016benefits
+Warning--empty address in papaioannou2016benefits
+Warning--empty publisher in radhakrishnan2013dahu
+Warning--empty address in radhakrishnan2013dahu
+Warning--empty publisher in singla2012jellyfish
+Warning--empty address in singla2012jellyfish
+Warning--no number and no volume in osqp
+Warning--page numbers missing in both pages and numpages fields in osqp
+Warning--empty publisher in valadarsky2015xpander
+Warning--empty address in valadarsky2015xpander
+Warning--empty publisher in wen2016flexfly
+Warning--empty address in wen2016flexfly
+Warning--empty publisher in zhao2018minimal
+Warning--empty address in zhao2018minimal
+Warning--page numbers missing in both pages and numpages fields in zhao2018minimal
+You've used 20 entries,
+            5719 wiz_defined-function locations,
+            1409 strings with 19064 characters,
+and the built_in function-call counts, 26605 in all, are:
+= -- 2911
+> -- 1298
+< -- 0
++ -- 440
+- -- 424
+* -- 2137
+:= -- 2861
+add.period$ -- 98
+call.type$ -- 20
+change.case$ -- 182
+chr.to.int$ -- 20
+cite$ -- 56
+duplicate$ -- 2265
+empty$ -- 1574
+format.name$ -- 504
+if$ -- 6205
+int.to.chr$ -- 2
+int.to.str$ -- 1
+missing$ -- 94
+newline$ -- 190
+num.names$ -- 160
+pop$ -- 966
+preamble$ -- 1
+purify$ -- 361
+quote$ -- 0
+skip$ -- 793
+stack$ -- 0
+substring$ -- 1761
+swap$ -- 220
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 516
+warning$ -- 36
+while$ -- 132
+width$ -- 0
+write$ -- 377
+(There were 36 warnings)
