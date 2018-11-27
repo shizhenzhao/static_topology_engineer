@@ -5,7 +5,6 @@
 \usepackage{afterpage}
 \usepackage{amssymb}
 \usepackage{lmodern}
-
 % Copyright
 \renewcommand\footnotetextcopyrightpermission[1]{} % removes footnote with conference info
 \setcopyright{none}
@@ -16,7 +15,7 @@
 %\setcopyright{usgovmixed}
 %\setcopyright{cagov}
 %\setcopyright{cagovmixed}
-
+\usepackage[outdir=figures/]{epstopdf}
 \settopmatter{printacmref=false, printccs=false, printfolios=true}
 
 % DOI
@@ -88,8 +87,8 @@ Data center traffic patterns are highly skewed and dynamic, making them very dif
 
 \begin{figure*}[ht!]
 \centering
-\includegraphics[height= 1.6in,trim={0.7cm 0.6cm 0.7cm 0.7cm}, width=0.92\textwidth]{figures/helios_v2}
-\caption{Helios topology fully interconnected via a patch-panel layer, alongside an illustration on the bipartite network graph representation of patch-panel $k$. All links in solid lines are bidirectional (undirected), and dotted links of the same color are the unidirectional (directed) representation of the same solid link.}
+\includegraphics[draft=false, height= 1.6in,trim={0.7cm 0.6cm 0.7cm 0.7cm}, width=0.92\textwidth]{figures/helios_v2}
+\caption{Helios topology fully interconnected via a patch-panel layer, alongside an illustration on the bipartite network graph representation of patch-panel $k$. All links in solid lines are bidirectional, and dotted links of the same color are the unidirectional representation of the same solid link.}
 \label{direct_connect_topology}
 \end{figure*}
 
@@ -97,7 +96,9 @@ Data center traffic patterns are highly skewed and dynamic, making them very dif
 
 Based on established literature \cite{benson2010network, benson2009understanding}, we know that inter-rack traffic patterns tend to be highly skewed. This implies a high degree of traffic locality, and that all-to-all uniform traffic rarely occurs. In addition to traffic skewness, studies \cite{delimitrou2012echo} show that most data center fabrics demonstrate transient, bursty traffic behavior. These highly-skewed traffic naturally create network hotspots, and severely congesting network links while leaving other network links relatively underutilized. Furthermore, these transient bursts further complicates DCN design since predicting traffic patterns accurately is very difficult, if not close to impossible.
 
-One way to ``even'' out highly-skewed traffic patterns is to load-balance using workload migration and clever job-placement \cite{jain2012topology}. However, as data center tends towards disaggregated hardware resources \cite{papaioannou2016benefits}, relying solely on intelligent workload placement will for link load-balancing will become increasingly difficult. This is because disaggregating compute resources from storage resources will force same workloads to be mapped onto dedicated clusters that are physically-separated. Even with perfect knowledge on job arrival and generated network traffic behavior, workload-placement alone cannot fundamentally even out the strong pairwise traffic pattern inherent to DC resource desegregation. 
+One way to ``even'' out highly-skewed traffic patterns is to load-balance using workload migration and clever job-placement \cite{jain2012topology}. However, as data center tends towards disaggregated hardware resources \cite{papaioannou2016benefits}, relying solely on intelligent workload placement will for link load-balancing will become increasingly difficult. This is because disaggregating compute resources from storage resources will force same workloads to be mapped onto dedicated clusters that are physically-separated. Even with perfect knowledge on job arrival and generated network traffic behavior, workload-placement alone cannot fundamentally even out the strong pairwise traffic pattern inherent to DC resource desegregation. \cite{reactor_liu2014}
+
+To account for traffic skewness and variability, many reconfigurable data center topologies~\cite{farrington2011helios, cthrough_wang_2011, reactor_liu2014, hamedazimi2014firefly, ghobadi2016projector} have been proposed using different optical circuit switching technologies. Optical circuit switching incurs non-negligible reconfig time, which could significantly increase data center's control plan complexity. As a consequence, a lot of effort has been put into driving down the switching time of these switching technologies. An implicit assumption here is that fast switching is a ``must have'' in order for a control plane to react to rapid and bursty traffic changes. In this work, we would like to challenge this assumption, and answer the question, ``can slowly reconfigurable topology capture fast traffic dynamics?''
 
 Another approach to even out out non-uniform traffic is through the use of congestion-aware routing algorithms. Most congestion-aware routing algorithms (i.e traffic engineering) balances link utilization across the network by deflecting traffic flow non-minimally to intermediate blocks first along less-congested paths. To first order, these congestion-aware routing schemes can introduce significant network delay to packets. More importantly, congestion-aware routing has the effect of creating network hotspots in other network areas, increasing overall traffic load within the network, and not to mention taking up precious bandwidth resources from other network resources. Therefore, it is clear that traffic engineering alone cannot sufficiently decongest and improve network throughput under many traffic permutations. 
 
@@ -111,7 +112,7 @@ Therefore, our contributions in this work is fourfold:
 \begin{itemize}
     \item We observed and surmise that DCN traffic can be represented using a small set of recurring traffic modes.
     \item We offer a traffic-aware topology design methodology on a DCN interconnected using off-the-shelve commodity patch panels to design a \textbf{static} topology that is highly robust to long term traffic change.
-    \item We present a routing-topology co-optimization technique that considers multiple traffic modes (i.e traffic matrices) which also accounts for DCN heterogeneity.
+    \item We present a routing-topology co-optimization technique that considers multiple traffic modes which also accounts for DCN heterogeneity.
     \item We propose 2 highly scalable, polynomial-time, and mathematically-guided algorithms for mapping fractional target topology onto the physical patch-panel with close-to-optimal performance.
 \end{itemize}
 
@@ -196,7 +197,7 @@ We briefly define several recurring terminologies in the context of this work:
 \subsection{Notations}
 %% include the table of notations here
 \begin{table}
-\begin{tabular}{|p{2.2cm}|p{5.8cm}|}
+\begin{tabular}{|p{2.7cm}|p{5.3cm}|}
 \hline
 $S = \{s_1, ..., s_n\}$ & Set of all $n$ pods\\
 \hline
@@ -229,7 +230,7 @@ $\omega_{p}$ & WCMP weight allocated along path $p$ \\
 \caption{Commonly-used notations} 
 \label{table:notations}
 \end{table}
- Before giving a rigorous treatment to the topology engineering problem, we dedicate this section to introducing a series of recurring notations that will be used throughout this paper. These notations are tabulated in Table \ref{table:notations}. For the sake of convenience, we shall abuse the notation $\mathbf{x} \in \mathbb{R}^{\lVert S \lVert \times \lVert S \lVert \times \lVert O \lVert}$ to denote the vector of $x_{ij}^k \; \forall \; i, j \in S, k \in O$, and $\mathbf{x}^k \in \mathbb{\lVert S \lVert \times \lVert S \lVert}$ to denote the vector of $x_{ij}^k \; \forall \; i, j \in S$ associated with a particular $k$. Similarly, we shall abuse the vector notation $\mathbf{d} = \{d_{ij} \; | \; i, j \in S\}$, and $\boldsymbol{\omega_p} = \{w_p \; | \; p \in \bigcup\limits_{i, j \in S}P_{ij}\}$.
+ Before giving a rigorous treatment to the topology engineering problem, we dedicate this section to introducing a series of recurring notations that will be used throughout this paper. These notations are tabulated in Table \ref{table:notations}. For the sake of convenience, we shall abuse the notation $\mathbf{x} \in \mathbb{R}^{\lVert S \lVert \times \lVert S \lVert \times \lVert O \lVert}$ to denote the vector of $x_{ij}^k \; \forall \; i, j \in S, k \in O$, and $\mathbf{x}^k \in \mathbb{R}^{\lVert S \lVert \times \lVert S \lVert}$ to denote the vector of $x_{ij}^k \; \forall \; i, j \in S$ associated with a particular $k$. Similarly, we shall abuse the vector notation $\mathbf{d} = \{d_{ij} \; | \; i, j \in S\}$, and $\boldsymbol{\omega_p} = \{w_p \; | \; p \in \bigcup\limits_{i, j \in S}P_{ij}\}$.
 
 As shown in Figure \ref{direct_connect_topology}, we assume each patch panel can be represented as a bipartite network flow graph. In our asymmetric topology model, $x_{ij}^k \neq x_{ji}^k$ for any $i \neq j$ in general. 
 
@@ -263,7 +264,7 @@ This problem is similar to that in \cite{zhang2005finding}. Unlike the \textit{C
 %%%%%%%%%%%%%%%%%%%% Deriving Optimal Fractional Graphs%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Step 2: Computing Fractional Topology}\label{section_fractional_topology}
-At this point, we've obtained a set of $\kappa$ representative traffic matrices, each representing a recurring traffic mode. Using these traffic modes, we detail a topology-routing co-optimization methodology to compute an optimal fractional topology. In this step, our goal is to compute an fractional topology that is optimized for all of the traffic modes found, as discussed in Section \ref{section_detecting_traffic_modes}. The logic employed here is that a fractional topology that is optimized for all of the traffic modes will allow our topology to cover sufficient grounds to account for traffic changes over time. 
+At this point, we've obtained $\kappa$ representative traffic matrices, each representing a recurring traffic mode. Using these traffic modes, we detail a topology-routing co-optimization methodology to compute an optimal fractional topology. In this step, our goal is to compute a fractional topology that is optimized for all of the traffic modes found, as discussed in Section \ref{section_detecting_traffic_modes}. The logic employed here is that a fractional topology that is optimized for all of the traffic modes will allow our topology to cover sufficient grounds to account for traffic changes over time. 
 
 \subsection{Definitions}
 We start off by giving a more rigorous definition of what a fractional topology is. As its namesake suggests, the number of links between two pods. In addition to non-integer inter-pod link counts, a fractional topology must satisfy additional constraints, as given by:
@@ -392,7 +393,6 @@ Where $\alpha$ is the scaling factor of each individual fractional graph. Constr
 %% Lagrangian Duality
 \section{Step 3: Mapping Fractional Topology onto Patch-Panels}\label{section_patch_panel_mapping}
 Having computed the optimal fractional topology, $D^*$, previously, we now attempt to map $D^*$ onto the patch panels such that the final logical topology best matches the fractional topology. Unfortunately, we cannot ignore the patch panel layer here. Since the logical topology has to be in integer form, obtaining the perfect match to this problem is equivalent to an NP-hard three-dimensional matching problem \cite{irving1994three, foerster2018characterizing}. In this work, we present two different relaxation approaches inspired by techniques commonly employed in convex optimization that provide close to optimal solutions. Before diving into the details of each approach, we briefly discuss some common structures to the patch-panel problem:
-
 \textbf{\\Hard / Physical Constraints: } This constraint states that the total number of integral flows that reach $s_j$ through $o_k$ cannot exceed the total physical links connecting the ingress ports of $s_j$ from $o_k$:
 \begin{equation}\label{phy_constraint1}
     \sum_{i \in S} x_{ij}^k \leq h_{ig}^k(j) \quad \forall \; k \in O, \; j \in S
@@ -405,13 +405,14 @@ By reciprocity, total number of integral flows through $o_k$ originating from $s
 \begin{equation}\label{con_constraint}
     c_{ij}^- \leq \sum_{k \in O} x_{ij}^k \leq c_{ij}^+, \quad \forall \; i,j \in S
 \end{equation}
-Where $c_{ij}^- = \floor{d_{ij}}$ and $c_{ij}^+ = \ceil{d_{ij}}$. A logical topology is deemed to perfectly match the fractional topology if for every $(i, j)$ pod pair, the inequality in (\ref{con_constraint}) is satisfied. It is possible that certain permutations of $D$ do not have a feasible solution. Therefore, the matching constraints are not hard constraints that must be met. In those cases, our approaches aim to minimize the number of matching constraints violated.\\
+Where $c_{ij}^- = \floor{d_{ij}}$ and $c_{ij}^+ = \ceil{d_{ij}}$. A logical topology is deemed to perfectly match the fractional topology if for every $(s_i, s_j)$ pod pair, the inequality in (\ref{con_constraint}) is satisfied. It is possible that certain permutations of $D$ do not have a feasible solution.In those cases, we simply aim to minimize the number of soft constraints violated.\\
+
 
 
 \subsection{Lagrangian Dual Method}\label{section_lagrangian_dual}
-The intuition behind the Lagrangian Dual method \cite{low1999optimization}
+We draw significant inspiration from Low et al. \cite{low1999optimization} in our approach with the Lagrangian dual method.
 The act of transforming the primal problem into its Lagrangian dual problem introduces the dual variables that will be used to ``score'' the cost of forming each logical link. 
-The dual problem can be written as:
+The dual problem is:
 \begin{equation}
 \begin{aligned}
 \min\limits_{\mathbf{p}^\pm}\max\limits_{\mathbf{x}}\Bigg\{U(\mathbf{x}) & + \sum\limits_{i, j \in S} \bigg[p_{ij}^- \big( \sum\limits_{k \in O}x_{ij}^k - c_{ij}^-\big) -p_{ij}^+ \big( \sum\limits_{k \in O}x_{ij}^k - c_{ij}^+ \big) \bigg] \Bigg\} \\
@@ -420,30 +421,45 @@ The dual problem can be written as:
 \end{aligned}
 \label{eqn:langrangian_duality}
 \end{equation}
-Where $p^\pm$ are the dual variables, and $U(\mathbf{x})$ denotes the objective function of the primal problem. We wrote . The primal objective function is written as:
+Where $p^\pm$ are the dual variables, and $U(\mathbf{x})$ denotes the objective function of the primal problem. In our implementation, we chose the primal objective function to be:
 \begin{equation} 
 \begin{aligned}
 U(\mathbf{x}) = \sum\limits_{i, j \in S} \sum\limits_{k \in O} -\big( x_{ij}^k - h_{ij}^k\big)^2
 \end{aligned}
 \label{eqn:lagrangian_primal_objective}
 \end{equation}
+Where $h_{ij}^k = \min\big(h_{eg}^k(s_i), h_{ig}^k(s_j)\big)$. We take advantage of the fact that $x_{ij}^k \leq h_{ij}^k \; \forall i, j \in S, \; k \in O$ to ``coerce'' the resulting logical topology to form more logical links through higher $x_{ij}^k$ values. This will force the logical topology solution to more fully-utilize the physical links available to them due to $U(\mathbf{x})$ behaving like a least-squared curve-fitting problem. In addition, a quadratic objective function possesses a strong convexity which stabilizes solution convergence. 
 
-The dual variables act as as regulatory variables, when the number of logical links connecting pods $s_i$ to $s_j$ becomes significantly higher than the . The writing of the objective function such that it is separable w.r.t $x_{ij}^k$ allows the equation to be decomposed into a series of smaller MCF subproblems. it is interesting to see that decomposing (\ref{eqn:langrangian_duality}) into a series of MCF subproblems for each individual patch panel resembles an individual sum game commonly featured within game theory. The intuition behind this decomposition is such that each patch panel will attempt to configure its switch state based on the current state of the overall logical topology such that it can best match the fractional topology, $D^*$. Each patch panel's cost function is optimized when the switching configuration obtained from solving its MCF problem is able to violate the fewest soft matching constraints. The quadratic primal objective function is chosen due to its strong convex properties that can help stabilize the convergence of the solution. In addition, we chose . 
+Observing (\ref{eqn:langrangian_duality}) closely gives us a good intuition on how this method works. The dual variables $\mathbf{p}^\pm$ essentially ``scores'' the cost of forming logical links between pods. For instance, when a particular pod pair $(s_i, s_j)$ is significantly under-provisioned (i.e $\sum\limits_{k \in O} x_{ij}^k < c_{ij}^-$), $p_{ij}^-$ will increase while $p_{ij}^+$ will decrease such that future patch panels will attempt to form more logical links between $(s_i, s_j)$. The opposite is true for when $(s_i, s_j)$ pair is significantly over-provisioned. In a sense, the regulatory behavior $\mathbf{p}^\pm$ exhibits a negative-feedback behavior by incentivizing or disincentivizing the formation of $(s_i, s_j)$ logical links at each patch panel until the soft constraint is met. Rearranging (\ref{eqn:langrangian_duality}) gives us: 
+\begin{equation}
+\begin{aligned}
+\min\limits_{\mathbf{p}^\pm} \Bigg\{\Big[- \sum\limits_{k \in O} \min\limits_{\mathbf{x}^k} Q_k(\mathbf{x}^k)\Big] + \sum\limits_{i, j \in S}p_{ij}^+ c_{ij}^+ - \sum\limits_{i, j \in S}p_{ij}^- c_{ij}^- \Bigg\}
+\end{aligned}
+\label{eqn:lagrangian_duality_mcf}
+\end{equation}
+Where $Q_k(\mathbf{x}^k) \approx \sum\limits_{i, j \in S}\big[p_{ij}^+ - p_{ij}^- - 2 h_{ij}^k + 2 x_{ij}^k{}^*\big]x_{ij}^k$. Note that $\min\limits_{\mathbf{x}^k}Q_k$ is simply a Min-cost Flow (MCF) problem for $o_k$ with $x_{ij}^k$ being the arc flow and $[p_{ij}^+ - p_{ij}^- - 2 h_{ij}^k + 2 x_{ij}^k{}^*]$ the cost per unit flow, which is obtained by applying first order linear approximation on an otherwise quadratic $Q_k(\mathbf{x}^k)$ evaluated at $x_{ij}^k = x_{ij}^k{}^*$. Interestingly, (\ref{eqn:lagrangian_duality_mcf}) decouples an otherwise difficult-to-solve convex optimization problem with integral constraints, (\ref{eqn:langrangian_duality}) w.r.t $x_{ij}^k$ into a series of MCF sub-problems, which can be solved efficiently with integer solutions using polynomial-time algorithms like Goldberg-Tarjan \cite{bunnagel1998efficient}.
+%% Q_k is approximated using first order linear approximation of the quadratic function w.r.t x_ij^k evaluated at x_ij^k{}^*
 
-\subsubsection{Dual descent\\}
-To solve the outer minimization problem in $\mathbf{D}$ w.r.t $\mathbf{p}^{\pm}$, we use an iterative gradient descent method with the step function $\delta(\tau) = \frac{1}{\tau + 1}$, where $\tau$ is the current step. The equation that governs the dual variables for the next iteration is:
+
+ 
+
+
+\subsubsection{Dual Gradient Descent}\text{\\}
+
+In order to solve the overall minimization problem w.r.t $\mathbf{p}^{\pm}$, we use an iterative gradient descent method with the step function $\delta(\tau) = \frac{1}{\tau + 1}$, where $\tau$ is the current iteration. The equation that governs the dual variables for the next iteration is:
 \begin{equation}\label{gradient_projection}
 \begin{aligned}
-\mathbf{p}^{\pm}(\tau + 1) &= \mathbf{p}^{\pm}(\tau) \; - \; \delta(\tau) \nabla_{\mathbf{p}^{\pm}} L(\mathbf{x}, \mathbf{p}^+(\tau), \mathbf{p}^-(\tau))\\
+\mathbf{p}^{\pm}(\tau + 1) %%&= \mathbf{p}^{\pm}(\tau) \; - \; \delta(\tau) \nabla_{\mathbf{p}^{\pm}} L(\mathbf{x}, \mathbf{p}^+(\tau), \mathbf{p}^-(\tau))\\
 &= \mathbf{p}^{\pm}(\tau) \; - \; \frac{1}{\tau + 1} \big(\pm \mathbf{c}^{\pm} \mp \sum_{k \in O}\mathbf{x}^k{}^* \big) \\
 \end{aligned}
 \end{equation}
-The step function of $\delta(\tau)$ is chosen because the sum of all step sizes forms a harmonic series, which sums approaches infinity as we take infinitely many iterations. This way, $\mathbf{p}^\pm$'s growth is not handicapped by the step size if their optimal values are large.
+Note that $\sum\limits_{\tau = 0}^{\infty}\delta(\tau)$ forms a harmonic series, which sum approaches infinity as we take infinitely many iterations. This way, $\mathbf{p}^\pm$'s growth is not handicapped by the step size if their optimal values are large. The overall algorithm for computing (\ref{eqn:lagrangian_duality_mcf}) is included in Appendix \ref{appendix:lagrangian_dual_detailed_walkthrough} for interested readers.
+
 
 
 %% Barrier Penalty method
 \subsection{Barrier Penalty Method}
-The barrier penalty method acts as a complementary implementation to the Lagrangian duality method. Unlike the previous method which relies on solving a Lagrangian dual problem, the barrier method is by comparison conceptually-straightforward. The main idea of this method is to introduce an objective that penalizes constraint violation. Overall, the barrier method is written as a convex optimization problem as follows:
+Here we introduce the barrier penalty method as a complementary implementation to the Lagrangian dual method. Like the previous method, this method is also inspired by the barrier function method commonly-used in convex optimization. In our implementation, the central idea is to introduce an objective that penalizes soft constraint violation, subject to the physical constraints (\ref{phy_constraint1}) and (\ref{phy_constraint2}):
 \begin{equation}
 \begin{aligned}
 \min\limits_{\mathbf{x}} U(\mathbf{x}) & = \sum_{i, j \in S}\Big[\big(\sum_{k \in O}x_{ij}^k - c_{ij}^-\big) \big(\sum_{k \in O}x_{ij}^k - c_{ij}^+\big)\Big]\\
@@ -451,7 +467,15 @@ The barrier penalty method acts as a complementary implementation to the Lagrang
 \end{aligned}\label{eqn:barrier_objective}
 \end{equation}
 
-As opposed to the Lagrangian duality method, in the barrier penalty method every patch panel is optimizing for the same objective function given in (\ref{eqn:barrier_objective}). This is somewhat reminiscent of a global sum game in which every patch panel acts as a player and attempts to optimize for a global objective function given the current state of the environment (i.e the logical topology discluding the current patch-panel's own contribution to the overall logical topology).
+Note that the objective function in (\ref{eqn:barrier_objective}) is quadratic w.r.t $\sum\limits_{k \in O}x_{ij}^k$, which is minimized when the soft-constraint for pod pair $(s_i, s_j)$ is satisfied. Unlike the Lagrangian dual method, this method is somewhat reminiscent of a cooperative game in game theory in which every patch panel (the player) attempts to optimize for the same global objective function (the cost function). Optimizing for (\ref{eqn:barrier_objective}) with integral-constraints is likely NP-hard. Thus, we again apply first order linear approximation w.r.t $x_{ij}^k$ to reduce complexity, arriving at:
+
+\begin{equation}
+\begin{aligned}
+\min\limits_{\mathbf{x}} U(\mathbf{x}) \approx \sum\limits_{k \in O} \min\limits_{\mathbf{x}^k} \sum\limits_{i, j \in S} \big[\sum\limits_{k \in O}2x_{ij}^k{}^* - (c_{ij}^+ + c_{ij}^-)\big]x_{ij}^k
+\end{aligned}\label{eqn:barrier_linear_approx}
+\end{equation}
+Which is again a MCF problem with $\big[\sum\limits_{k \in O}2x_{ij}^k{}^* - (c_{ij}^+ + c_{ij}^-)\big]$ as the cost per unit $x_{ij}^k$ flow. Unlike (\ref{eqn:barrier_objective}), (\ref{eqn:barrier_linear_approx}) can be solved using netflow algorithms in polynomial time with integer $x_{ij}^k$ solutions.
+
 
 \section{Analysis of Patch Panel-Mapping Algorithms}\label{section_reconfiguration_algo_analysis}
 \subsection{Optimality Analysis}
@@ -459,7 +483,7 @@ Here we examine the optimality of both the barrier penalty and Lagrangian dual m
 
 The $\rho$ for $\rho$-nearest neighbor traffic is the traffic pattern in which a pod only sends traffic to peer pods that are within $\rho$-units of index in circular distance. Bipartite traffic splits the network fabric into roughly two-equal sized sets, in which each pod sends traffic uniformly to pods in the opposite set.
 
-We evaluate the quality of the relaxed-optimization approaches of both the Lagrangian dual method and the barrier penalty method using two metrics: fraction of constraints satisfied and loss of optimality. Given a fractional demand graph, $[d_{ij}] \in \mathbb{R}^{N \times N}$, a constraint is satisfied if the integer connectivity satisfies: $\floor{d_{ij}}\leq \sum\limits_{k \in O}x_{ij}^k \leq \ceil{d_{ij}}$. Meanwhile, optimality loss is defined as the ratio of MLU obtained from routing over an integer logical topology to the MLU obtained from routing over a fractional topology, given the same traffic matrix. This is a useful metric, as it measures directly the increase in MLU compared to the theoretical lower bound achieved using a  fractional topology. It is important to keep in mind that the fractional topology assumes full-connectivity, which is not the case in real DCN. Therefore, both optimality loss and constraint violation metrics are expected to improve when the fractional topology is derived when accounting for physical constraints.
+We evaluate the quality of the relaxed-optimization approaches of both the Lagrangian dual method and the barrier penalty method using two metrics: fraction of constraints satisfied and loss of optimality. Given a fractional demand graph, $[d_{ij}] \in \mathbb{R}^{N \times N}$, a constraint is satisfied if the integer connectivity satisfies: $\floor{d_{ij}}\leq \sum\limits_{k \in O}x_{ij}^k \leq \ceil{d_{ij}}$ for any $(i, j)$. Meanwhile, optimality loss is defined as the ratio of MLU obtained from routing over an integer logical topology to the MLU obtained from routing over a fractional topology, given the same traffic matrix. This is a useful metric, as it measures directly the increase in MLU compared to the theoretical lower bound achieved using a  fractional topology. It is important to keep in mind that the fractional topology assumes full-connectivity, which is not the case in real DCN. Therefore, both optimality loss and constraint violation metrics are expected to improve when the fractional topology is derived when accounting for physical constraints.
 
 Figure \ref{optimality_loss_benchmark} shows that in both algorithms perform very well for most topology sizes, with the Lagrangian duality method consistently outperforming the barrier method aside for the bipartite traffic case, in which case they exhibit comparable optimality losses. Under the $\rho$-nearest neighbor traffic load, over 99\% of the fabrics optimality loss of under 10\%, while all the fabrics under bipartite and random traffic loads experience less than 10\% optimality loss.
 
@@ -550,7 +574,7 @@ Additionally, we also compute the stretch factor hourly using $\frac{\sum\limits
 
 \begin{figure*}[t!]
 \centering
-\includegraphics[scale=1.2, width=\textwidth, height=9cm, trim={2cm 1.9cm 1cm 0.60cm}]{figures/lu90.eps}
+\includegraphics[scale=1.2, width=\textwidth, height=9cm, trim={2cm 1.9cm 1cm 0.60cm}]{./figures/lu90}
 \caption{Month-long relative LU90 performance with $\kappa = $ 1, 2, and 3.}
 \label{lu90_results}
 \end{figure*}
