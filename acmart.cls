@@ -1071,7 +1071,7 @@
   \ifx\acmConference@shortname\@empty
     \gdef\acmConference@shortname{#2}%
   \fi}
-\acmConference[SIGCOMM'19]{ACM Conference}{August 19-24, 2019}{Beijing, China}
+%\acmConference[SIGCOMM'19]{ACM Conference}{August 19-24, 2019}{Beijing, China}
 \def\acmBooktitle#1{\gdef\@acmBooktitle{#1}}
 \acmBooktitle{Proceedings of \acmConference@name
        \ifx\acmConference@name\acmConference@shortname\else
