@@ -1,0 +1,685 @@
+fab0 ('monthly', 'biweekly')
+(mlu)
+	k1
+	lower whisker= 0.352711,
+	lower quartile= 0.434346,
+	median= 0.468583,
+	upper quartile= 0.514982,
+	upper whisker= 0.825833,
+	k4
+	lower whisker= 0.349725,
+	lower quartile= 0.426805,
+	median= 0.456493,
+	upper quartile= 0.496285,
+	upper whisker= 0.689506,
+	nte
+	lower whisker= 0.355216,
+	lower quartile= 0.44069,
+	median= 0.472845,
+	upper quartile= 0.508362,
+	upper whisker= 0.620216,
+	ite
+	lower whisker= 0.342882719828,
+	lower quartile= 0.41525276598,
+	median= 0.450844910169,
+	upper quartile= 0.493861,
+	upper whisker= 0.593266,
+(alu)
+	k1
+	lower whisker= 0.317178,
+	lower quartile= 0.363988,
+	median= 0.391191,
+	upper quartile= 0.415631,
+	upper whisker= 0.510697,
+	k4
+	lower whisker= 0.320044,
+	lower quartile= 0.355648,
+	median= 0.375145,
+	upper quartile= 0.395262,
+	upper whisker= 0.450181,
+	nte
+	lower whisker= 0.326772,
+	lower quartile= 0.372703,
+	median= 0.390682,
+	upper quartile= 0.412199,
+	upper whisker= 0.469426,
+	ite
+	lower whisker= 0.313369,
+	lower quartile= 0.344271,
+	median= 0.360869,
+	upper quartile= 0.377758,
+	upper whisker= 0.448027638734,
+(stretch)
+	k1
+	lower whisker= 5.099231,
+	lower quartile= 5.207822,
+	median= 5.252168,
+	upper quartile= 5.345711,
+	upper whisker= 5.548091,
+	k4
+	lower whisker= 5.087639,
+	lower quartile= 5.174219,
+	median= 5.227667,
+	upper quartile= 5.277962,
+	upper whisker= 5.588471,
+	nte
+	lower whisker= 5.572163,
+	lower quartile= 5.835998,
+	median= 5.875289,
+	upper quartile= 6.212846,
+	upper whisker= 6.464057,
+	ite
+	lower whisker= 5.015501,
+	lower quartile= 5.15774,
+	median= 5.201504,
+	upper quartile= 5.260265,
+	upper whisker= 5.54248357973,
+fab1 ('monthly', 'biweekly')
+(mlu)
+	k1
+	lower whisker= 0.418679,
+	lower quartile= 0.50808,
+	median= 0.547861,
+	upper quartile= 0.645324,
+	upper whisker= 0.797853,
+	k4
+	lower whisker= 0.411875,
+	lower quartile= 0.495119,
+	median= 0.534945,
+	upper quartile= 0.629562,
+	upper whisker= 0.776049,
+	nte
+	lower whisker= 0.418838,
+	lower quartile= 0.508301,
+	median= 0.551416,
+	upper quartile= 0.652734,
+	upper whisker= 0.809521,
+	ite
+	lower whisker= 0.411875,
+	lower quartile= 0.487264782682,
+	median= 0.533955375148,
+	upper quartile= 0.623553824309,
+	upper whisker= 0.765133976931,
+(alu)
+	k1
+	lower whisker= 0.334452,
+	lower quartile= 0.371019,
+	median= 0.38396,
+	upper quartile= 0.404078,
+	upper whisker= 0.453122,
+	k4
+	lower whisker= 0.330894,
+	lower quartile= 0.364217,
+	median= 0.375133,
+	upper quartile= 0.393238,
+	upper whisker= 0.437309,
+	nte
+	lower whisker= 0.342397,
+	lower quartile= 0.386744,
+	median= 0.399431,
+	upper quartile= 0.413925,
+	upper whisker= 0.452622,
+	ite
+	lower whisker= 0.322766842502,
+	lower quartile= 0.361764,
+	median= 0.371006,
+	upper quartile= 0.383429676233,
+	upper whisker= 0.424433744423,
+(stretch)
+	k1
+	lower whisker= 5.021384,
+	lower quartile= 5.064947,
+	median= 5.099276,
+	upper quartile= 5.153387,
+	upper whisker= 5.360324,
+	k4
+	lower whisker= 5.019209,
+	lower quartile= 5.059592,
+	median= 5.079512,
+	upper quartile= 5.117405,
+	upper whisker= 5.382041,
+	nte
+	lower whisker= 5.273651,
+	lower quartile= 5.430947,
+	median= 5.501081,
+	upper quartile= 5.667299,
+	upper whisker= 6.138575,
+	ite
+	lower whisker= 5.006747,
+	lower quartile= 5.042135,
+	median= 5.058578,
+	upper quartile= 5.083427,
+	upper whisker= 5.338418,
+fab2 ('monthly', 'biweekly')
+(mlu)
+	k1
+	lower whisker= 0.300097,
+	lower quartile= 0.495672,
+	median= 0.541174,
+	upper quartile= 0.592151,
+	upper whisker= 0.780039,
+	k4
+	lower whisker= 0.300092,
+	lower quartile= 0.486531,
+	median= 0.525616,
+	upper quartile= 0.569603,
+	upper whisker= 0.757011,
+	nte
+	lower whisker= 0.300098,
+	lower quartile= 0.495703,
+	median= 0.53749,
+	upper quartile= 0.584961,
+	upper whisker= 0.783789,
+	ite
+	lower whisker= 0.285490130568,
+	lower quartile= 0.480733456329,
+	median= 0.511895051552,
+	upper quartile= 0.566290756762,
+	upper whisker= 0.744523576917,
+(alu)
+	k1
+	lower whisker= 0.300008,
+	lower quartile= 0.368365,
+	median= 0.397712,
+	upper quartile= 0.418216,
+	upper whisker= 0.466797,
+	k4
+	lower whisker= 0.300007,
+	lower quartile= 0.36453,
+	median= 0.390319,
+	upper quartile= 0.410176,
+	upper whisker= 0.464591,
+	nte
+	lower whisker= 0.300008,
+	lower quartile= 0.373347,
+	median= 0.390163,
+	upper quartile= 0.411316,
+	upper whisker= 0.467671,
+	ite
+	lower whisker= 0.300001,
+	lower quartile= 0.358432,
+	median= 0.386222,
+	upper quartile= 0.406682,
+	upper whisker= 0.457866,
+(stretch)
+	k1
+	lower whisker= 5.008415,
+	lower quartile= 5.045783,
+	median= 5.065145,
+	upper quartile= 5.099525,
+	upper whisker= 7.457363,
+	k4
+	lower whisker= 5.011445,
+	lower quartile= 5.043239,
+	median= 5.05865,
+	upper quartile= 5.083181,
+	upper whisker= 7.826567,
+	nte
+	lower whisker= 5.051828,
+	lower quartile= 5.110472,
+	median= 5.158952,
+	upper quartile= 5.253401,
+	upper whisker= 7.867187,
+	ite
+	lower whisker= 5.0,
+	lower quartile= 5.025698,
+	median= 5.035271,
+	upper quartile= 5.048618,
+	upper whisker= 5.304296,
+fab3 ('monthly', 'biweekly')
+(mlu)
+	k1
+	lower whisker= 0.335311,
+	lower quartile= 0.427821,
+	median= 0.479231,
+	upper quartile= 0.543294,
+	upper whisker= 1.227032,
+	k4
+	lower whisker= 0.332181,
+	lower quartile= 0.422171,
+	median= 0.46573,
+	upper quartile= 0.521388,
+	upper whisker= 0.923507,
+	nte
+	lower whisker= 0.337813,
+	lower quartile= 0.4426,
+	median= 0.494657,
+	upper quartile= 0.566435,
+	upper whisker= 1.300695,
+	ite
+	lower whisker= 0.321932850001,
+	lower quartile= 0.419077337443,
+	median= 0.454715510054,
+	upper quartile= 0.519937177762,
+	upper whisker= 0.908635456553,
+(alu)
+	k1
+	lower whisker= 0.303464,
+	lower quartile= 0.336993,
+	median= 0.35622,
+	upper quartile= 0.383074,
+	upper whisker= 0.487785,
+	k4
+	lower whisker= 0.303034,
+	lower quartile= 0.334726,
+	median= 0.348742,
+	upper quartile= 0.37072,
+	upper whisker= 0.520417,
+	nte
+	lower whisker= 0.304817,
+	lower quartile= 0.377474,
+	median= 0.405713,
+	upper quartile= 0.435252,
+	upper whisker= 0.745149,
+	ite
+	lower whisker= 0.302752,
+	lower quartile= 0.319262,
+	median= 0.3309,
+	upper quartile= 0.345441,
+	upper whisker= 0.419169,
+(stretch)
+	k1
+	lower whisker= 5.070875,
+	lower quartile= 5.192306,
+	median= 5.260979,
+	upper quartile= 5.375438,
+	upper whisker= 6.079832,
+	k4
+	lower whisker= 5.064023,
+	lower quartile= 5.239571,
+	median= 5.319668,
+	upper quartile= 5.428841,
+	upper whisker= 5.973284,
+	nte
+	lower whisker= 5.621381,
+	lower quartile= 6.424025,
+	median= 6.624554,
+	upper quartile= 6.769289,
+	upper whisker= 7.013831,
+	ite
+	lower whisker= 5.012936,
+	lower quartile= 5.069378,
+	median= 5.089022,
+	upper quartile= 5.112974,
+	upper whisker= 5.33993,
+fab4 ('monthly', 'biweekly')
+(mlu)
+	k1
+	lower whisker= 0.331534,
+	lower quartile= 0.389706,
+	median= 0.416635,
+	upper quartile= 0.462067,
+	upper whisker= 0.651827,
+	k4
+	lower whisker= 0.330254,
+	lower quartile= 0.384375,
+	median= 0.412772,
+	upper quartile= 0.452083,
+	upper whisker= 0.631431,
+	nte
+	lower whisker= 0.332252,
+	lower quartile= 0.385938,
+	median= 0.414697,
+	upper quartile= 0.463867,
+	upper whisker= 0.657324,
+	ite
+	lower whisker= 0.316409564261,
+	lower quartile= 0.373782885066,
+	median= 0.404689563555,
+	upper quartile= 0.446188813921,
+	upper whisker= 0.624718831596,
+(alu)
+	k1
+	lower whisker= 0.309286,
+	lower quartile= 0.329361,
+	median= 0.342033,
+	upper quartile= 0.352031,
+	upper whisker= 0.446171,
+	k4
+	lower whisker= 0.309742,
+	lower quartile= 0.325463,
+	median= 0.337475,
+	upper quartile= 0.351929,
+	upper whisker= 0.42973,
+	nte
+	lower whisker= 0.314255,
+	lower quartile= 0.331231,
+	median= 0.337779,
+	upper quartile= 0.346747,
+	upper whisker= 0.420578,
+	ite
+	lower whisker= 0.30547,
+	lower quartile= 0.319337,
+	median= 0.333479,
+	upper quartile= 0.344514721429,
+	upper whisker= 0.408274,
+(stretch)
+	k1
+	lower whisker= 5.010287,
+	lower quartile= 5.030039,
+	median= 5.057375,
+	upper quartile= 5.162522,
+	upper whisker= 5.391482,
+	k4
+	lower whisker= 5.010221,
+	lower quartile= 5.034251,
+	median= 5.076578,
+	upper quartile= 5.188382,
+	upper whisker= 5.381867,
+	nte
+	lower whisker= 5.073428,
+	lower quartile= 5.180738,
+	median= 5.24861,
+	upper quartile= 5.727593,
+	upper whisker= 6.673817,
+	ite
+	lower whisker= 5.000318,
+	lower quartile= 5.015252,
+	median= 5.022131,
+	upper quartile= 5.032442,
+	upper whisker= 5.268071,
+fab5 ('monthly', 'biweekly')
+(mlu)
+	k1
+	lower whisker= 0.342369,
+	lower quartile= 0.407669,
+	median= 0.432237,
+	upper quartile= 0.471276,
+	upper whisker= 0.679445,
+	k4
+	lower whisker= 0.338533,
+	lower quartile= 0.401281,
+	median= 0.425155,
+	upper quartile= 0.450964,
+	upper whisker= 0.641306,
+	nte
+	lower whisker= 0.349744,
+	lower quartile= 0.420606,
+	median= 0.446416,
+	upper quartile= 0.475512,
+	upper whisker= 0.696928,
+	ite
+	lower whisker= 0.334018021361,
+	lower quartile= 0.386830886056,
+	median= 0.418446218086,
+	upper quartile= 0.441150942785,
+	upper whisker= 0.632562454182,
+(alu)
+	k1
+	lower whisker= 0.311276,
+	lower quartile= 0.337954,
+	median= 0.348063,
+	upper quartile= 0.356509,
+	upper whisker= 0.397396,
+	k4
+	lower whisker= 0.310027,
+	lower quartile= 0.332661,
+	median= 0.339978,
+	upper quartile= 0.347066,
+	upper whisker= 0.380017,
+	nte
+	lower whisker= 0.314797,
+	lower quartile= 0.347145,
+	median= 0.356301,
+	upper quartile= 0.364769,
+	upper whisker= 0.399191,
+	ite
+	lower whisker= 0.306675,
+	lower quartile= 0.330835,
+	median= 0.339485,
+	upper quartile= 0.340806803057,
+	upper whisker= 0.376991284998,
+(stretch)
+	k1
+	lower whisker= 5.068232,
+	lower quartile= 5.251211,
+	median= 5.313041,
+	upper quartile= 5.387087,
+	upper whisker= 5.803928,
+	k4
+	lower whisker= 5.090777,
+	lower quartile= 5.246135,
+	median= 5.301947,
+	upper quartile= 5.381738,
+	upper whisker= 5.783615,
+	nte
+	lower whisker= 5.303198,
+	lower quartile= 5.614868,
+	median= 5.753021,
+	upper quartile= 5.839583,
+	upper whisker= 6.274328,
+	ite
+	lower whisker= 5.020694,
+	lower quartile= 5.111204,
+	median= 5.155706,
+	upper quartile= 5.228246,
+	upper whisker= 5.663798,
+fab6 ('monthly', 'biweekly')
+(mlu)
+	k1
+	lower whisker= 0.443249,
+	lower quartile= 0.569426,
+	median= 0.611233,
+	upper quartile= 0.643553,
+	upper whisker= 1.365839,
+	k4
+	lower whisker= 0.432423,
+	lower quartile= 0.547316,
+	median= 0.579509,
+	upper quartile= 0.607209,
+	upper whisker= 1.254678,
+	nte
+	lower whisker= 0.467871,
+	lower quartile= 0.608594,
+	median= 0.648047,
+	upper quartile= 0.683398,
+	upper whisker= 1.515723,
+	ite
+	lower whisker= 0.420648800527,
+	lower quartile= 0.537746468598,
+	median= 0.566557669533,
+	upper quartile= 0.600028295507,
+	upper whisker= 1.25124559712,
+(alu)
+	k1
+	lower whisker= 0.342105,
+	lower quartile= 0.39646,
+	median= 0.410601,
+	upper quartile= 0.426692,
+	upper whisker= 0.597004,
+	k4
+	lower whisker= 0.343626,
+	lower quartile= 0.384176,
+	median= 0.397715,
+	upper quartile= 0.411453,
+	upper whisker= 0.556424,
+	nte
+	lower whisker= 0.378497,
+	lower quartile= 0.426773,
+	median= 0.450675,
+	upper quartile= 0.477318,
+	upper whisker= 0.743986,
+	ite
+	lower whisker= 0.329451,
+	lower quartile= 0.37075,
+	median= 0.38293,
+	upper quartile= 0.393419,
+	upper whisker= 0.539652,
+(stretch)
+	k1
+	lower whisker= 5.047502,
+	lower quartile= 5.183486,
+	median= 5.272643,
+	upper quartile= 5.410211,
+	upper whisker= 5.959169,
+	k4
+	lower whisker= 5.052593,
+	lower quartile= 5.244638,
+	median= 5.301302,
+	upper quartile= 5.395793,
+	upper whisker= 5.903963,
+	nte
+	lower whisker= 5.591222,
+	lower quartile= 5.916068,
+	median= 6.027872,
+	upper quartile= 6.14171,
+	upper whisker= 6.692762,
+	ite
+	lower whisker= 5.008007,
+	lower quartile= 5.056547,
+	median= 5.070947,
+	upper quartile= 5.089466,
+	upper whisker= 5.241647,
+fab7 ('monthly', 'biweekly')
+(mlu)
+	k1
+	lower whisker= 0.350827,
+	lower quartile= 0.424528,
+	median= 0.479836,
+	upper quartile= 0.561745,
+	upper whisker= 0.711458,
+	k4
+	lower whisker= 0.347232,
+	lower quartile= 0.419612,
+	median= 0.468099,
+	upper quartile= 0.541927,
+	upper whisker= 0.694314,
+	nte
+	lower whisker= 0.351025,
+	lower quartile= 0.422119,
+	median= 0.486914,
+	upper quartile= 0.569922,
+	upper whisker= 0.743604,
+	ite
+	lower whisker= 0.342967707471,
+	lower quartile= 0.413979049109,
+	median= 0.467459235089,
+	upper quartile= 0.539232295464,
+	upper whisker= 0.683824074351,
+(alu)
+	k1
+	lower whisker= 0.307811,
+	lower quartile= 0.328773,
+	median= 0.339939,
+	upper quartile= 0.353575,
+	upper whisker= 0.392245,
+	k4
+	lower whisker= 0.308655,
+	lower quartile= 0.327768,
+	median= 0.339321,
+	upper quartile= 0.348472,
+	upper whisker= 0.37593,
+	nte
+	lower whisker= 0.308744,
+	lower quartile= 0.325199,
+	median= 0.334073,
+	upper quartile= 0.355542,
+	upper whisker= 0.384597,
+	ite
+	lower whisker= 0.305877,
+	lower quartile= 0.321818,
+	median= 0.330708,
+	upper quartile= 0.334808085215,
+	upper whisker= 0.374882,
+(stretch)
+	k1
+	lower whisker= 5.054141,
+	lower quartile= 5.253482,
+	median= 5.424317,
+	upper quartile= 5.60246,
+	upper whisker= 6.098285,
+	k4
+	lower whisker= 5.057498,
+	lower quartile= 5.285075,
+	median= 5.47502,
+	upper quartile= 5.651462,
+	upper whisker= 6.196802,
+	nte
+	lower whisker= 5.178692,
+	lower quartile= 5.467682,
+	median= 5.599412,
+	upper quartile= 5.743367,
+	upper whisker= 6.348263,
+	ite
+	lower whisker= 5.011826,
+	lower quartile= 5.057651,
+	median= 5.095007,
+	upper quartile= 5.179625,
+	upper whisker= 5.866241,
+fab8 ('monthly', 'biweekly')
+(mlu)
+	k1
+	lower whisker= 0.397023,
+	lower quartile= 0.594075,
+	median= 0.672897,
+	upper quartile= 0.755488,
+	upper whisker= 1.115933,
+	k4
+	lower whisker= 0.411094,
+	lower quartile= 0.624103,
+	median= 0.692732,
+	upper quartile= 0.764589,
+	upper whisker= 1.327936,
+	nte
+	lower whisker= 0.388265,
+	lower quartile= 0.600452,
+	median= 0.687626,
+	upper quartile= 0.774824,
+	upper whisker= 1.147063,
+	ite
+	lower whisker= 0.386322,
+	lower quartile= 0.592236,
+	median= 0.665817862027,
+	upper quartile= 0.745364479878,
+	upper whisker= 1.10611908868,
+(alu)
+	k1
+	lower whisker= 0.324122,
+	lower quartile= 0.376048,
+	median= 0.400852,
+	upper quartile= 0.419751,
+	upper whisker= 0.545626,
+	k4
+	lower whisker= 0.331109,
+	lower quartile= 0.396492,
+	median= 0.441093,
+	upper quartile= 0.482617,
+	upper whisker= 0.684577,
+	nte
+	lower whisker= 0.331278,
+	lower quartile= 0.368882,
+	median= 0.38379,
+	upper quartile= 0.403991,
+	upper whisker= 0.492088,
+	ite
+	lower whisker= 0.318151,
+	lower quartile= 0.360241,
+	median= 0.381834,
+	upper quartile= 0.389023744672,
+	upper whisker= 0.486652972823,
+(stretch)
+	k1
+	lower whisker= 5.018597,
+	lower quartile= 5.123279,
+	median= 5.207051,
+	upper quartile= 5.317124,
+	upper whisker= 6.099014,
+	k4
+	lower whisker= 5.062634,
+	lower quartile= 5.179634,
+	median= 5.296457,
+	upper quartile= 5.445017,
+	upper whisker= 6.54074,
+	nte
+	lower whisker= 5.02076,
+	lower quartile= 5.200247,
+	median= 5.334371,
+	upper quartile= 5.503454,
+	upper whisker= 6.1118,
+	ite
+	lower whisker= 5.007773,
+	lower quartile= 5.062658,
+	median= 5.10248,
+	upper quartile= 5.14736,
+	upper whisker= 5.511647,
+
