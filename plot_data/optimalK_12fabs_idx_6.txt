@@ -1,0 +1,3 @@
+fab0 fab1 fab2 fab3 fab4 fab5 fab6 fab7 fab8 fab9 fab10 fab11 
+4 2 5 3 7 5 1 3 6 4 5 4 
+3 2 2 2 6 2 2 2 3 3 2 2 
