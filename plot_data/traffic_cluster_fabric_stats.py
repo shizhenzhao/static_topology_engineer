@@ -44,7 +44,7 @@ def ReadOptimalKFiles(file_dir, indices):
 			all_fabrics_optimalK_silhouette[fab_name].append(fabric_silhouette_optimalK[fab_name])
 	return all_fabrics_optimalK_gap, all_fabrics_optimalK_silhouette
 
-dirname = "/Users/minyee/static_topology_engineer/plot_data/"
+dirname = "./"
 indices = [1,2,3,4,5,6,7,8,9]
 
 fabrics_optimalK_gap, fabrics_optimalK_silhouette = ReadOptimalKFiles(dirname, indices)
