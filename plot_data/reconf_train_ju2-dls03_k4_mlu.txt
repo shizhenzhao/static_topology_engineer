@@ -1,48 +1,48 @@
 (('1hours', 'biweekly'))
-\addplot+ [boxplot prepared={lower whisker= 0.031542, lower quartile= 0.055225, median= 0.070841, upper quartile= 0.095068, upper whisker= 1.35, }]
-table[row sep=\\,y index=0] {1.3625\\ 1.369345\\ 1.395238\\ 1.398214\\ 1.404779\\ 1.418155\\ 1.449107\\ 1.452381\\ 1.463691\\ 1.529044\\ 0.031055\\ 0.030671\\ 0.029967\\ 0.029243\\ 0.028536\\ 0.027817\\ 0.027197\\ 0.025752\\ 0.023045\\ 0.022984\\ };
+\addplot+ [boxplot prepared={lower whisker= 0.023045, lower quartile= 0.031542, median= 0.070841, upper quartile= 1.35, upper whisker= 1.506845, }]
+table[row sep=\\,y index=0] {1.529044\\ 0.022984\\ };
 
 (('1hours', 'daily'))
-\addplot+ [boxplot prepared={lower whisker= 0.031934, lower quartile= 0.056641, median= 0.075431, upper quartile= 0.102637, upper whisker= 0.787981, }]
-table[row sep=\\,y index=0] {0.835096\\ 0.837083\\ 0.8375\\ 0.842308\\ 0.842647\\ 0.855515\\ 0.85625\\ 0.887981\\ 0.904044\\ 1.084615\\ 0.031328\\ 0.030756\\ 0.03021\\ 0.029426\\ 0.028809\\ 0.028242\\ 0.027539\\ 0.026559\\ 0.0246\\ 0.022209\\ };
+\addplot+ [boxplot prepared={lower whisker= 0.022712, lower quartile= 0.031934, median= 0.075431, upper quartile= 0.787981, upper whisker= 1.008173, }]
+table[row sep=\\,y index=0] {1.084615\\ 0.022209\\ };
 
 (('1hours', 'weekly'))
-\addplot+ [boxplot prepared={lower whisker= 0.032429, lower quartile= 0.05625, median= 0.074382, upper quartile= 0.10136, upper whisker= 0.891544, }]
-table[row sep=\\,y index=0] {0.897011\\ 0.907692\\ 0.914145\\ 0.915132\\ 0.91875\\ 0.922368\\ 0.940461\\ 0.941827\\ 0.950481\\ 1.096635\\ 0.031846\\ 0.031273\\ 0.030727\\ 0.030166\\ 0.029408\\ 0.028516\\ 0.027592\\ 0.02672\\ 0.024218\\ 0.022235\\ };
+\addplot+ [boxplot prepared={lower whisker= 0.022771, lower quartile= 0.032429, median= 0.074382, upper quartile= 0.891544, upper whisker= 1.031731, }]
+table[row sep=\\,y index=0] {1.096635\\ 0.022235\\ };
 
 (('daily', 'biweekly'))
-\addplot+ [boxplot prepared={lower whisker= 0.033862, lower quartile= 0.076959, median= 0.104713, upper quartile= 0.126929, upper whisker= 0.903125, }]
-table[row sep=\\,y index=0] {0.934722\\ 0.967708\\ 1.024306\\ 1.047917\\ 1.084722\\ 1.170486\\ 1.363542\\ 1.471875\\ 1.561111\\ 1.646875\\ 0.033263\\ 0.032509\\ 0.031983\\ 0.03111\\ 0.030065\\ 0.028884\\ 0.027519\\ 0.02598\\ 0.022477\\ 0.016443\\ };
+\addplot+ [boxplot prepared={lower whisker= 0.021362, lower quartile= 0.033862, median= 0.104713, upper quartile= 0.903125, upper whisker= 1.539236, }]
+table[row sep=\\,y index=0] {1.561111\\ 1.573611\\ 1.597222\\ 1.646875\\ 0.02119\\ 0.021162\\ 0.020362\\ 0.016443\\ };
 
 (('daily', 'daily'))
-\addplot+ [boxplot prepared={lower whisker= 0.033955, lower quartile= 0.077091, median= 0.101692, upper quartile= 0.123391, upper whisker= 1.65, }]
-table[row sep=\\,y index=0] {1.660075\\ 1.675\\ 1.702344\\ 1.719531\\ 1.740625\\ 1.771094\\ 1.791406\\ 1.828125\\ 1.932812\\ 2.283594\\ 0.033257\\ 0.032492\\ 0.031629\\ 0.03055\\ 0.029244\\ 0.028078\\ 0.026663\\ 0.024945\\ 0.01967\\ 0.015485\\ };
+\addplot+ [boxplot prepared={lower whisker= 0.020618, lower quartile= 0.033955, median= 0.101692, upper quartile= 1.65, upper whisker= 1.966406, }]
+table[row sep=\\,y index=0] {2.078125\\ 2.114844\\ 2.128906\\ 2.15625\\ 2.283594\\ 0.020579\\ 0.020443\\ 0.01967\\ 0.018949\\ 0.015485\\ };
 
 (('daily', 'weekly'))
-\addplot+ [boxplot prepared={lower whisker= 0.034358, lower quartile= 0.078218, median= 0.104125, upper quartile= 0.126749, upper whisker= 0.758333, }]
-table[row sep=\\,y index=0] {0.772569\\ 0.780556\\ 0.793056\\ 0.803819\\ 0.818056\\ 0.843403\\ 0.862847\\ 0.878472\\ 0.909028\\ 0.993147\\ 0.033582\\ 0.032895\\ 0.032179\\ 0.031284\\ 0.030084\\ 0.028869\\ 0.027519\\ 0.025814\\ 0.021298\\ 0.015485\\ };
+\addplot+ [boxplot prepared={lower whisker= 0.022295, lower quartile= 0.034358, median= 0.104125, upper quartile= 0.758333, upper whisker= 0.909028, }]
+table[row sep=\\,y index=0] {0.910764\\ 0.920833\\ 0.94844\\ 0.951042\\ 0.993147\\ 0.02201\\ 0.021362\\ 0.021298\\ 0.020494\\ 0.015485\\ };
 
 (('monthly', 'biweekly'))
-\addplot+ [boxplot prepared={lower whisker= 0.033489, lower quartile= 0.076026, median= 0.101452, upper quartile= 0.121733, upper whisker= 0.225326, }]
-table[row sep=\\,y index=0] {0.226213\\ 0.227099\\ 0.227612\\ 0.229384\\ 0.230131\\ 0.231856\\ 0.236147\\ 0.333362\\ 0.665817\\ 0.970095\\ 0.032882\\ 0.032229\\ 0.031553\\ 0.030457\\ 0.02942\\ 0.028524\\ 0.026923\\ 0.025047\\ 0.021861\\ 0.015485\\ };
+\addplot+ [boxplot prepared={lower whisker= 0.021362, lower quartile= 0.033489, median= 0.101452, upper quartile= 0.225326, upper whisker= 0.59529, }]
+table[row sep=\\,y index=0] {0.665817\\ 0.809162\\ 0.928695\\ 0.970095\\ 0.021035\\ 0.02098\\ 0.02057\\ 0.015485\\ };
 
 (('monthly', 'daily'))
-\addplot+ [boxplot prepared={lower whisker= 0.033319, lower quartile= 0.078125, median= 0.102612, upper quartile= 0.125317, upper whisker= 0.228778, }]
-table[row sep=\\,y index=0] {0.229757\\ 0.23055\\ 0.232251\\ 0.233409\\ 0.235826\\ 0.236565\\ 0.237983\\ 0.242204\\ 0.353095\\ 0.902251\\ 0.032603\\ 0.031903\\ 0.031063\\ 0.029756\\ 0.028685\\ 0.027285\\ 0.026026\\ 0.023787\\ 0.019076\\ 0.015485\\ };
+\addplot+ [boxplot prepared={lower whisker= 0.019963, lower quartile= 0.033319, median= 0.102612, upper quartile= 0.228778, upper whisker= 0.553617, }]
+table[row sep=\\,y index=0] {0.553658\\ 0.619252\\ 0.752572\\ 0.863746\\ 0.902251\\ 0.019403\\ 0.019132\\ 0.019076\\ 0.017901\\ 0.015485\\ };
 
 (('monthly', 'weekly'))
-\addplot+ [boxplot prepared={lower whisker= 0.034406, lower quartile= 0.077045, median= 0.100093, upper quartile= 0.121174, upper whisker= 0.226213, }]
-table[row sep=\\,y index=0] {0.227006\\ 0.227612\\ 0.229338\\ 0.229944\\ 0.23055\\ 0.232416\\ 0.235405\\ 0.263156\\ 0.603065\\ 0.982837\\ 0.033535\\ 0.032743\\ 0.031903\\ 0.030867\\ 0.029597\\ 0.028358\\ 0.027026\\ 0.024956\\ 0.020382\\ 0.015671\\ };
+\addplot+ [boxplot prepared={lower whisker= 0.021109, lower quartile= 0.034406, median= 0.100093, upper quartile= 0.226213, upper whisker= 0.603065, }]
+table[row sep=\\,y index=0] {0.603109\\ 0.674562\\ 0.81979\\ 0.940893\\ 0.982837\\ 0.021095\\ 0.020841\\ 0.020382\\ 0.020298\\ 0.015671\\ };
 
 (('weekly', 'biweekly'))
-\addplot+ [boxplot prepared={lower whisker= 0.033751, lower quartile= 0.076791, median= 0.10445, upper quartile= 0.125946, upper whisker= 0.225373, }]
-table[row sep=\\,y index=0] {0.226213\\ 0.227099\\ 0.227612\\ 0.229384\\ 0.230131\\ 0.232229\\ 0.237525\\ 0.369444\\ 0.737883\\ 1.075096\\ 0.033256\\ 0.032556\\ 0.031788\\ 0.031017\\ 0.029804\\ 0.028844\\ 0.027426\\ 0.025703\\ 0.022295\\ 0.016427\\ };
+\addplot+ [boxplot prepared={lower whisker= 0.021789, lower quartile= 0.033751, median= 0.10445, upper quartile= 0.225373, upper whisker= 0.659722, }]
+table[row sep=\\,y index=0] {0.737883\\ 0.896743\\ 1.029215\\ 1.075096\\ 0.021362\\ 0.020966\\ 0.020911\\ 0.016427\\ };
 
 (('weekly', 'daily'))
-\addplot+ [boxplot prepared={lower whisker= 0.034586, lower quartile= 0.078078, median= 0.103172, upper quartile= 0.124487, upper whisker= 0.229897, }]
-table[row sep=\\,y index=0] {0.23055\\ 0.231818\\ 0.232369\\ 0.233409\\ 0.235889\\ 0.237313\\ 0.240905\\ 0.250321\\ 0.353095\\ 0.902251\\ 0.034002\\ 0.033396\\ 0.032696\\ 0.031937\\ 0.031157\\ 0.030131\\ 0.02875\\ 0.026812\\ 0.021423\\ 0.015485\\ };
+\addplot+ [boxplot prepared={lower whisker= 0.021986, lower quartile= 0.034586, median= 0.103172, upper quartile= 0.229897, upper whisker= 0.553617, }]
+table[row sep=\\,y index=0] {0.553658\\ 0.619252\\ 0.752572\\ 0.863746\\ 0.902251\\ 0.021646\\ 0.021463\\ 0.021423\\ 0.019132\\ 0.015485\\ };
 
 (('weekly', 'weekly'))
-\addplot+ [boxplot prepared={lower whisker= 0.034467, lower quartile= 0.077519, median= 0.104293, upper quartile= 0.126296, upper whisker= 0.227612, }]
-table[row sep=\\,y index=0] {0.229338\\ 0.229944\\ 0.23055\\ 0.232369\\ 0.234996\\ 0.236018\\ 0.242857\\ 0.259615\\ 0.571535\\ 1.010337\\ 0.033702\\ 0.032976\\ 0.032229\\ 0.031297\\ 0.030224\\ 0.028918\\ 0.027519\\ 0.025673\\ 0.021035\\ 0.015485\\ };
+\addplot+ [boxplot prepared={lower whisker= 0.022295, lower quartile= 0.034467, median= 0.104293, upper quartile= 0.227612, upper whisker= 0.571535, }]
+table[row sep=\\,y index=0] {0.571577\\ 0.639295\\ 0.806298\\ 0.964856\\ 1.010337\\ 0.021861\\ 0.02159\\ 0.021035\\ 0.02098\\ 0.015485\\ };
 
