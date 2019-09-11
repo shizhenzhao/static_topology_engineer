@@ -1,4 +1,4 @@
-x_val x_val_str threshold_0.95 threshold_0.98 threshold_0.99 
+x_val x_val_str threshold_0p95 threshold_0p98 threshold_0p99 
 1 HalfHour 0.998770554787 0.988320270478 0.96173351775 
 2 OneHour 0.998924235439 0.99139388351 0.970493314892 
 3 HalfDay 0.999846319348 0.998770554787 0.99231596742 
