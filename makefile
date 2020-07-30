@@ -9,7 +9,7 @@ ALLSRC = $(TEXSRC) $(BIBSRC) $(FIGS)
 all: traffic_aware_topology.pdf
 
 traffic_aware_topology.pdf: traffic_aware_topology.ps
-	ps2pdf14 traffic_aware_topology.ps
+	#ps2pdf14 traffic_aware_topology.ps
 	open traffic_aware_topology.pdf
 
 traffic_aware_topology.ps: traffic_aware_topology.dvi
