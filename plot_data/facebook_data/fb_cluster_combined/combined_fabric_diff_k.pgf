@@ -164,7 +164,7 @@
 \pgftext[x=2.373720in,y=0.262778in,,top]{\rmfamily\fontsize{6.500000}{7.800000}\selectfont 9}%
 \end{pgfscope}%
 \begin{pgfscope}%
-\pgftext[x=1.493400in,y=0.133148in,,top]{\rmfamily\fontsize{7.400000}{8.880000}\selectfont Num. of Critical TMs, \(\displaystyle k\)}%
+\pgftext[x=1.493400in,y=0.133148in,,top]{\rmfamily\fontsize{7.400000}{8.880000}\selectfont Num. of Critical TMs}%
 \end{pgfscope}%
 \begin{pgfscope}%
 \pgfpathrectangle{\pgfqpoint{0.393000in}{0.360000in}}{\pgfqpoint{2.200800in}{1.242000in}}%
