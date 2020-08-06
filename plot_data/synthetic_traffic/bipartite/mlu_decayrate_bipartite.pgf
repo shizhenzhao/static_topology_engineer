@@ -164,7 +164,7 @@
 \pgftext[x=2.495248in,y=0.238778in,,top]{\rmfamily\fontsize{6.500000}{7.800000}\selectfont \(\displaystyle 2.0\)}%
 \end{pgfscope}%
 \begin{pgfscope}%
-\pgftext[x=1.503450in,y=0.109148in,,top]{\rmfamily\fontsize{7.400000}{8.880000}\selectfont MLU}%
+\pgftext[x=1.503450in,y=0.109148in,,top]{\rmfamily\fontsize{7.400000}{8.880000}\selectfont \(\displaystyle x\)}%
 \end{pgfscope}%
 \begin{pgfscope}%
 \pgfpathrectangle{\pgfqpoint{0.462600in}{0.336000in}}{\pgfqpoint{2.081700in}{1.176000in}}%
